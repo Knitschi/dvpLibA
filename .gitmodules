@@ -1,9 +1,3 @@
-[submodule "Sources/dvpLibB2"]
-	path = Sources/dvpLibB2
-	url = https://github.com/Knitschi/dvpLibC.git
-[submodule "Sources/dvpLibB1"]
-	path = Sources/dvpLibB1
-	url = https://github.com/Knitschi/dvpLibC.git
 [submodule "Sources/dvpLibC"]
 	path = Sources/dvpLibC
 	url = https://github.com/Knitschi/dvpLibC.git
