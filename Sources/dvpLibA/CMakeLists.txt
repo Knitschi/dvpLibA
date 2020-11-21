@@ -10,11 +10,11 @@ set( longDescription "" )
 
 
 set( PACKAGE_PUBLIC_HEADER
-	function.h
+	libA.h
 )
 
 set( PACKAGE_PRODUCTION_FILES
-	function.cpp
+	libA.cpp
 )
 
 ############################################## Add Package #################################

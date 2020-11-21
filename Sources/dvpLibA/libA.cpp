@@ -1,7 +1,7 @@
-#include <BPackage/function.h>
+#include <dvpLibA/libA.h>
 #include <iostream>
 
-namespace b
+namespace dvpLibA
 {
 	void function()
 	{
