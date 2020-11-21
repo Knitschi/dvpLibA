@@ -4,5 +4,6 @@
 
 namespace dvpLibA
 {
-	DVPLIBA_EXPORT void function();
+	DVPLIBA_EXPORT void workWithValueType();
+	DVPLIBA_EXPORT void workWithComplexType();
 }

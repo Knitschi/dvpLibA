@@ -2,6 +2,13 @@
 include(cpfInitPackageProject)
 include(cpfAddCppPackage)
 
+set(versionRequirements
+	TARGET dvpLibC 1.0.0
+	TARGET dvpLibB1 1.0.0
+	TARGET dvpLibB2 1.0.0
+)
+
+#checkVersionRequirements("${versionRequirements}")
 
 cpfInitPackageProject()
 
@@ -11,10 +18,11 @@ set( longDescription "" )
 
 set( PACKAGE_PUBLIC_HEADER
 	libA.h
-)
+) 
 
 set( PACKAGE_PRODUCTION_FILES
 	libA.cpp
+	VersionUtilities.cmake
 )
 
 ############################################## Add Package #################################
@@ -26,4 +34,5 @@ cpfAddCppPackage(
 	PACKAGE_NAMESPACE		dvpLibA
 	PUBLIC_HEADER			${PACKAGE_PUBLIC_HEADER}
 	PRODUCTION_FILES		${PACKAGE_PRODUCTION_FILES}
+	LINKED_LIBRARIES		dvpLibC dvpLibB1 dvpLibB2
 )
