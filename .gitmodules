@@ -10,6 +10,6 @@
 [submodule "Sources/CPFCMake"]
 	path = Sources/CPFCMake
 	url = https://github.com/Knitschi/CPFCMake.git
-[submodule "Sources/CPFBuildScripts"]
-	path = Sources/CPFBuildScripts
-	url = https://github.com/Knitschi/CPFBuildScripts.git
+[submodule "Sources/CIBuildConfigurations"]
+	path = Sources/CIBuildConfigurations
+	url = https://github.com/Knitschi/CIBuildConfigurations.git
