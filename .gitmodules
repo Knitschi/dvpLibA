@@ -1,5 +1,5 @@
 [submodule "Sources/dvpLibC"]
-	path = Sources/dvpLibC_1_0_0
+	path = Sources/dvpLibC_1_1_0
 	url = https://github.com/Knitschi/dvpLibC.git
 [submodule "Sources/dvpLibB1"]
 	path = Sources/dvpLibB1_2_0_0

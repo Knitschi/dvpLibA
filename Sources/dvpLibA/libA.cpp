@@ -29,7 +29,7 @@ namespace dvpLibA
 		auto foo4 = dvpLibB2_1_0_0::b2CreateComplexType();
 		dvpLibB1_2_0_0::b1SetComplexType(std::move(foo4));
 
-		auto foo5 = std::make_unique<dvpLibC_1_0_0::ComplexType>();
+		auto foo5 = std::make_unique<dvpLibC_1_1_0::ComplexType>();
 		dvpLibB2_1_0_0::b2UseComplexType(foo5.get());
 		dvpLibB1_2_0_0::b1UseComplexType(foo5.get());
 	}
