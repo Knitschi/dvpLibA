@@ -25,6 +25,12 @@ set( PACKAGE_PRODUCTION_FILES
 	VersionUtilities.cmake
 )
 
+set(dvpLibC_from_dvpLibB1 dvpLibC_2_0_0)
+set(dvpLibC_from_dvpLibB2 dvpLibC_1_1_0)
+set(dvpLibB1_direct dvpLibB1_2_0_0)
+set(dvpLibB2_direct dvpLibB2_1_0_0)
+
+
 ############################################## Add Package #################################
 cpfAddCppPackage( 
 	TYPE					LIB
@@ -34,8 +40,14 @@ cpfAddCppPackage(
 	PACKAGE_NAMESPACE		dvpLibA
 	PUBLIC_HEADER			${PACKAGE_PUBLIC_HEADER}
 	PRODUCTION_FILES		${PACKAGE_PRODUCTION_FILES}
-	LINKED_LIBRARIES		dvpLibC_1_0_0 dvpLibB1_2_0_0 dvpLibB2_1_0_0
+	LINKED_LIBRARIES		${dvpLibC_from_dvpLibB1} ${dvpLibC_from_dvpLibB2} ${dvpLibB1_direct} ${dvpLibB2_direct}
 )
 
-cpfGetInCodeVersion(inCodeVersion ${PROJECT_VERSION})
-target_compile_definitions(${PROJECT_NAME} PRIVATE CPF_IN_CODE_VERSION=${inCodeVersion})
+cpfSetupInCodeVersionMechanism()
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE 
+	dvpLibC_from_dvpLibB1=${dvpLibC_from_dvpLibB1}
+	dvpLibC_from_dvpLibB2=${dvpLibC_from_dvpLibB2}
+	dvpLibB1_direct=${dvpLibB1_direct}
+	dvpLibB1_direct=${dvpLibB2_direct}
+)
