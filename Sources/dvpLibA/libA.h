@@ -1,6 +1,7 @@
 #pragma once
 
-#include <dvpLibA/dvpLibA_export.h>
+#define dvpLibAVer dvpLibA
+#include CPF_VERSIONED_INCLUDE(dvpLibAVer, dvpLibA_export.h)
 
 namespace dvpLibA
 {

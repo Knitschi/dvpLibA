@@ -1,8 +1,12 @@
 #include <dvpLibA/libA.h>
 #include <iostream>
 
-#include <dvpLibB1_2_0_0/libB1.h>
-#include <dvpLibB2_1_0_0/libB2.h>
+#define dvpLibB1Ver dvpLibB1_2_0_0
+#include CPF_VERSIONED_INCLUDE(dvpLibB1Ver, libB1.h)
+
+#define dvpLibB2Ver dvpLibB2_1_0_0
+#include CPF_VERSIONED_INCLUDE(dvpLibB2Ver, libB2.h)
+
 
 namespace dvpLibA
 {
