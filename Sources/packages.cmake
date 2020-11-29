@@ -5,5 +5,5 @@ set( CPF_PACKAGES
     EXTERNAL dvpLibC_2_0_0
     EXTERNAL dvpLibB1_2_0_0
     EXTERNAL dvpLibB2_1_0_0
-    OWNED dvpLibA
+    OWNED dvpLibA_1_0_0
 )

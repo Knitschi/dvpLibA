@@ -23,6 +23,7 @@ set( PACKAGE_PUBLIC_HEADER
 set( PACKAGE_PRODUCTION_FILES
 	libA.cpp
 	VersionUtilities.cmake
+	main.cpp
 )
 
 set(dvpLibC_from_dvpLibB1 dvpLibC_2_0_0)
@@ -32,7 +33,7 @@ set(dvpLibB2_direct dvpLibB2_1_0_0)
 
 ############################################## Add Package #################################
 cpfAddCppPackage( 
-	TYPE					LIB
+	TYPE					CONSOLE_APP
 	OWNER 					Knitschi
 	BRIEF_DESCRIPTION		${briefDescription}
 	LONG_DESCRIPTION		${longDescription}

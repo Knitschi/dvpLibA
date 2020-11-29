@@ -1,4 +1,7 @@
-#include <dvpLibA/libA.h>
+
+#define dvpLibAVer dvpLibA_1_0_0
+#include CPF_VERSIONED_INCLUDE(dvpLibAVer, libA.h)
+
 #include <iostream>
 
 #define dvpLibB1Ver dvpLibB1_2_0_0
@@ -10,7 +13,7 @@
 #define dvpLibCVer_from_dvpLibB2 dvpLibC_1_1_0
 #define dvpLibCVer_from_dvpLibB1 dvpLibC_2_0_0
 
-namespace dvpLibA
+namespace dvpLibAVer
 {
 	dvpLibCVer_from_dvpLibB2::ValueType to_1_1_0ValueType(dvpLibCVer_from_dvpLibB1::ValueType value)
 	{
@@ -79,5 +82,6 @@ namespace dvpLibA
 		dvpLibB2Ver::b2UseComplexType(foo5.get());
 		dvpLibB1Ver::b1UseComplexType(to_2_0_0ComplexType(foo5.get()));
 	}
-
 }
+
+

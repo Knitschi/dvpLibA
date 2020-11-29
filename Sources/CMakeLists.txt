@@ -23,9 +23,12 @@ endfunction()
 
 function( cpfSetupInCodeVersionMechanism )
 
-	# Setup the force include of the VersionPrefix.h header.
-	getIncludeFileCompileOptions(includeOption "VersionPrefix.h")
-	target_compile_options(${PROJECT_NAME} PRIVATE ${includeOption})
+	get_property(binaryTargets TARGET ${PROJECT_NAME} PROPERTY INTERFACE_CPF_BINARY_SUBTARGETS)
+	foreach(target ${binaryTargets})
+		# Setup the force include of the VersionPrefix.h header.
+		getIncludeFileCompileOptions(includeOption "VersionPrefix.h")
+		target_compile_options(${target} PRIVATE ${includeOption})
+	endforeach()
 
 endfunction()
 
