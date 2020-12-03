@@ -1,9 +1,9 @@
 #pragma once
 
-#define dvpLibAVer dvpLibA_1_0_0
-#include CPF_VERSIONED_INCLUDE(dvpLibAVer, dvpLibA_1_0_0_export.h)
+#include "dvpLibAVersionMacros.h"
+#include CPF_VERSIONED_INCLUDE(dvpLibA, dvpLibA_1_0_0_export.h)
 
-namespace dvpLibAVer
+namespace dvpLibA
 {
 	DVPLIBA_1_0_0_EXPORT void workWithValueType();
 	DVPLIBA_1_0_0_EXPORT void workWithComplexType();
