@@ -2,7 +2,7 @@ set( CPF_PACKAGES
 	EXTERNAL CPFCMake
     EXTERNAL CPFBuildscripts
     EXTERNAL dvpLibC_2_2_0
-    EXTERNAL dvpLibC_2_0_0
+    EXTERNAL dvpLibC_2_3_0
     EXTERNAL dvpLibB1_2_0_0
     EXTERNAL dvpLibB2_1_0_0
     OWNED dvpLibA_1_0_0
