@@ -32,13 +32,15 @@ set(dvpLibC_from_dvpLibB2 dvpLibC_1_1_0)
 set(dvpLibB1_direct dvpLibB1_2_0_0)
 set(dvpLibB2_direct dvpLibB2_1_0_0)
 
+cpfGetUnversionedPackageName(isVersionedName unversionedName versionPostfix ${PROJECT_NAME})
+
 ############################################## Add Package #################################
 cpfAddCppPackage( 
 	TYPE					CONSOLE_APP
 	OWNER 					Knitschi
 	BRIEF_DESCRIPTION		${briefDescription}
 	LONG_DESCRIPTION		${longDescription}
-	PACKAGE_NAMESPACE		${PROJECT_NAME}
+	PACKAGE_NAMESPACE		${unversionedName}
 	PUBLIC_HEADER			${PACKAGE_PUBLIC_HEADER}
 	PRODUCTION_FILES		${PACKAGE_PRODUCTION_FILES}
 	LINKED_LIBRARIES		${dvpLibC_from_dvpLibB1} ${dvpLibC_from_dvpLibB2} ${dvpLibB1_direct} ${dvpLibB2_direct}
