@@ -8,14 +8,14 @@
 
 #include CPF_VERSIONED_INCLUDE(dvpLibB2, libB2.h)
 
-#define dvpLibCVer_from_dvpLibB2 dvpLibC_2_2_0
-#define dvpLibCVer_from_dvpLibB1 dvpLibC_2_3_0
+#define dvpLibC_from_dvpLibB2 dvpLibC_2_2_0
+#define dvpLibC_from_dvpLibB1 dvpLibC_2_3_0
 
 namespace dvpLibA
 {
-	dvpLibCVer_from_dvpLibB2::ValueType to_2_2_0ValueType(dvpLibCVer_from_dvpLibB1::ValueType value)
+	dvpLibC_from_dvpLibB2::ValueType to_2_2_0ValueType(dvpLibC_from_dvpLibB1::ValueType value)
 	{
-		dvpLibCVer_from_dvpLibB2::ValueType oldVersion;
+		dvpLibC_from_dvpLibB2::ValueType oldVersion;
 
 		oldVersion.foo = value.foo;
 		oldVersion.bar = value.bar;
@@ -23,9 +23,9 @@ namespace dvpLibA
 		return oldVersion;
 	}
 
-	dvpLibCVer_from_dvpLibB1::ValueType to_2_3_0ValueType(dvpLibCVer_from_dvpLibB2::ValueType value)
+	dvpLibC_from_dvpLibB1::ValueType to_2_3_0ValueType(dvpLibC_from_dvpLibB2::ValueType value)
 	{
-		dvpLibCVer_from_dvpLibB1::ValueType newVersion;
+		dvpLibC_from_dvpLibB1::ValueType newVersion;
 
 		newVersion.foo = value.foo;
 		newVersion.bar = value.bar;
@@ -42,24 +42,24 @@ namespace dvpLibA
 		dvpLibB1::b1UseValueType(to_2_3_0ValueType(foo2));
 	}
 
-	dvpLibCVer_from_dvpLibB2::ComplexType* to_2_2_0ComplexType(dvpLibCVer_from_dvpLibB1::ComplexType* ct)
+	dvpLibC_from_dvpLibB2::ComplexType* to_2_2_0ComplexType(dvpLibC_from_dvpLibB1::ComplexType* ct)
 	{
-		return reinterpret_cast<dvpLibCVer_from_dvpLibB2::ComplexType*>(ct);
+		return reinterpret_cast<dvpLibC_from_dvpLibB2::ComplexType*>(ct);
 	}
 
-	dvpLibCVer_from_dvpLibB1::ComplexType* to_2_3_0ComplexType(dvpLibCVer_from_dvpLibB2::ComplexType* ct)
+	dvpLibC_from_dvpLibB1::ComplexType* to_2_3_0ComplexType(dvpLibC_from_dvpLibB2::ComplexType* ct)
 	{
-		return reinterpret_cast<dvpLibCVer_from_dvpLibB1::ComplexType*>(ct);
+		return reinterpret_cast<dvpLibC_from_dvpLibB1::ComplexType*>(ct);
 	}
 
-	std::unique_ptr<dvpLibCVer_from_dvpLibB2::ComplexType> to_2_2_0UniqueComplexType(std::unique_ptr<dvpLibCVer_from_dvpLibB1::ComplexType> ct)
+	std::unique_ptr<dvpLibC_from_dvpLibB2::ComplexType> to_2_2_0UniqueComplexType(std::unique_ptr<dvpLibC_from_dvpLibB1::ComplexType> ct)
 	{
-		return std::unique_ptr<dvpLibCVer_from_dvpLibB2::ComplexType>(to_2_2_0ComplexType(ct.release()));
+		return std::unique_ptr<dvpLibC_from_dvpLibB2::ComplexType>(to_2_2_0ComplexType(ct.release()));
 	}
 
-	std::unique_ptr<dvpLibCVer_from_dvpLibB1::ComplexType> to_2_3_0UniqueComplexType(std::unique_ptr<dvpLibCVer_from_dvpLibB2::ComplexType> ct)
+	std::unique_ptr<dvpLibC_from_dvpLibB1::ComplexType> to_2_3_0UniqueComplexType(std::unique_ptr<dvpLibC_from_dvpLibB2::ComplexType> ct)
 	{
-		return std::unique_ptr<dvpLibCVer_from_dvpLibB1::ComplexType>(to_2_3_0ComplexType(ct.release()));
+		return std::unique_ptr<dvpLibC_from_dvpLibB1::ComplexType>(to_2_3_0ComplexType(ct.release()));
 	}
 
 	void workWithComplexType()
@@ -76,7 +76,7 @@ namespace dvpLibA
 		auto foo4 = dvpLibB2::b2CreateComplexType();
 		dvpLibB1::b1SetComplexType(to_2_3_0UniqueComplexType(std::move(foo4)));
 
-		auto foo5 = std::make_unique<dvpLibCVer_from_dvpLibB2::ComplexType>();
+		auto foo5 = std::make_unique<dvpLibC_from_dvpLibB2::ComplexType>();
 		dvpLibB2::b2UseComplexType(foo5.get());
 		dvpLibB1::b1UseComplexType(to_2_3_0ComplexType(foo5.get()));
 	}
