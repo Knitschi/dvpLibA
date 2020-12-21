@@ -22,3 +22,6 @@
 [submodule "Sources/dvpLibD_1_0_0"]
 	path = Sources/dvpLibD_1_0_0
 	url = https://github.com/Knitschi/dvpLibD.git
+[submodule "Sources/dvpLibD_1_1_0"]
+	path = Sources/dvpLibD_1_1_0
+	url = https://github.com/Knitschi/dvpLibD.git
