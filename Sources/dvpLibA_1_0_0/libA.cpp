@@ -1,5 +1,5 @@
 
-#include "dvpLibAVersionMacros.h"
+#include "dvpLibADependencyNames.h"
 #include CPF_VERSIONED_INCLUDE(dvpLibA, libA.h)
 
 #include <iostream>
@@ -7,9 +7,6 @@
 #include CPF_VERSIONED_INCLUDE(dvpLibB1, libB1.h)
 
 #include CPF_VERSIONED_INCLUDE(dvpLibB2, libB2.h)
-
-#define dvpLibC_from_dvpLibB2 dvpLibC_2_2_0
-#define dvpLibC_from_dvpLibB1 dvpLibC_2_3_0
 
 namespace dvpLibA
 {

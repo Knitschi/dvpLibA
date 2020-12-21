@@ -18,7 +18,6 @@ set( longDescription "" )
 
 set( PACKAGE_PUBLIC_HEADER
 	libA.h
-	dvpLibAVersionMacros.h
 ) 
 
 set( PACKAGE_PRODUCTION_FILES
