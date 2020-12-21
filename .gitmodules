@@ -1,5 +1,5 @@
 [submodule "Sources/dvpLibC"]
-	path = Sources/dvpLibC_2_2_0
+	path = Sources/dvpLibC_2_5_0
 	url = https://github.com/Knitschi/dvpLibC.git
 [submodule "Sources/dvpLibB1"]
 	path = Sources/dvpLibB1_2_0_0
@@ -17,5 +17,8 @@
 	path = Sources/CPFBuildscripts
 	url = https://github.com/Knitschi/CPFBuildscripts.git
 [submodule "Sources/dvpLibC_2_0_0"]
-	path = Sources/dvpLibC_2_3_0
+	path = Sources/dvpLibC_2_4_0
 	url = https://github.com/Knitschi/dvpLibC.git
+[submodule "Sources/dvpLibD_1_0_0"]
+	path = Sources/dvpLibD_1_0_0
+	url = https://github.com/Knitschi/dvpLibD.git

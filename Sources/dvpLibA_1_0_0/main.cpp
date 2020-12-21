@@ -6,6 +6,7 @@ int main()
 {
 	dvpLibAVer::workWithValueType();
 	dvpLibAVer::workWithComplexType();
+	dvpLibAVer::workWithdvpLibD();
 
 	return 0;
 }

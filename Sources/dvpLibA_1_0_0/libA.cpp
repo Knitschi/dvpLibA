@@ -5,8 +5,8 @@
 #include <iostream>
 
 #include CPF_VERSIONED_INCLUDE(dvpLibB1, libB1.h)
-
 #include CPF_VERSIONED_INCLUDE(dvpLibB2, libB2.h)
+#include CPF_VERSIONED_INCLUDE(dvpLibD, MyFunction.h)
 
 namespace dvpLibA
 {
@@ -77,6 +77,12 @@ namespace dvpLibA
 		dvpLibB2::b2UseComplexType(foo5.get());
 		dvpLibB1::b1UseComplexType(to_2_3_0ComplexType(foo5.get()));
 	}
+
+	void workWithdvpLibD()
+	{
+		auto isCool = dvpLibD::isCoolMan();
+	}
+
 }
 
 

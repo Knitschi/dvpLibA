@@ -7,5 +7,6 @@ namespace dvpLibA
 {
 	DVPLIBA_EXPORT void workWithValueType();
 	DVPLIBA_EXPORT void workWithComplexType();
+	DVPLIBA_EXPORT void workWithdvpLibD();
 }
 
