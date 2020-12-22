@@ -10,7 +10,6 @@ function( checkVersionRequirements requirementsList )
 	cpfGetKeywordValueLists( dependencyVariables TARGET "" "${ARGN}" dependency )
 	foreach(variable ${dependencyVariables})
 		set(values ${${variable}})
-		devMessage("${values}")
 	endforach()
 
 
