@@ -41,7 +41,7 @@ cpfAddCppPackage(
 	PRODUCTION_FILES		${PACKAGE_PRODUCTION_FILES}
 	LINKED_LIBRARIES		
 		PUBLIC				dvpLibB1_2_0_0 dvpLibB2_1_0_0
-		PRIVATE				dvpLibD_1_0_0
+		PRIVATE				dvpLibD_1_2_0
 )
 
 cpfSetupInCodeVersionMechanism()
